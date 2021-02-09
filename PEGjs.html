@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+
+            a{
+                text-decoration: none;
+            }
+
+            button:hover{
+                background-color: #007bff;             
+                color: white;
+            }
+            button:active{     
+                background-color: rgb(250, 129, 244);   
+                color: purple;
+                border-color: teal;
+            }
+            .title {
+                text-align: center;
+                font-size: 5.3rem;
+                font-weight: bold;
+            }
+            
+            .subtitle {
+                text-align: center;
+                font-size: 1.3rem;
+                font-weight: 300;
+                margin-bottom: 10px;
+            }
+            
+            .main {
+                width: 1000px;
+                margin: 0 auto;
+                margin-top: 60px;
+            }
+
+            .prices {
+                display: flex;
+            }
+
+            .price-item {
+                width: 300px;
+                height: 300px;
+                border: 1px solid black;
+                margin: 10px;
+                border-radius: 6px;
+                text-align: center;
+            }
+
+            .price-item-title {
+                font-size: 1.5rem;                
+                background-color: rgb(215, 223, 233);
+                text-align: center;
+                height: 53px;
+                line-height: 53px;
+                border-bottom: 2px solid black;
+            }
+
+            .price-item-container{
+                margin: auto;
+                width: 200px;
+                height: 50px;
+            }
+
+            .price-item-price {
+                font-size: 2rem;
+                font-weight: bold;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .price-item-button {
+                padding: .3rem 1rem;
+                font-size: 1.25rem;
+                line-height: 1.5;
+                border-radius: .3rem;
+                color: #007bff;
+                background-color: transparent;
+                background-image: none;
+                border-color: #007bff;
+                margin-top: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="nav"> </div>
+        </div>
+        <div class="main">
+            <div class="title">
+                P E G
+            </div>
+            <div class="subtitle">
+                PUBG Enjoying Group
+            </div>
+            <div class="prices">
+                <script>
+                    var role = ['1선', '2선', '3선', '4선'];
+                    var player = ['이승우', '유제협', '황민우', '성낙훈'];
+                    var details = [['반속이 빨라야한다.','버티기 가능해야한다.'],
+                                ['1선과 동일'],
+                                ['시야가 넓어야한다.','샷발이 좋아야한다.'],
+                                ['시야가 좋아야한다.','DMR, SR 숙련도 상.']];
+                    var i = 0;
+                    var item = '';
+                    while(i<4){
+                        item += '<div class="price-item">';
+                        item += '<div class="price-item-title">';
+                        item += role[i];
+                        item += '</div>';
+                        item += '<div class="price-item-price">';
+                        item += player[i];
+                        item += '</div>';
+                        item += '<div class="price-item-container">';
+                        for (var idx in details[i]){
+                            item += '<div class="price-item-detail">';
+                            item += details[i][idx];
+                            item += '</div>';
+                        }
+                        item += '</div>';
+                        item += '<button class="price-item-button">';
+                        item += '<a href="PEG_B.html">분석보기</a>';
+                        item += '</button>';
+                        item += '</div>';
+                        document.write(item);
+                        item = '';
+                        i += 1;
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
