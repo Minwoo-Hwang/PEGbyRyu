@@ -103,9 +103,13 @@
                                 ['1선과 동일'],
                                 ['시야가 넓어야한다.','샷발이 좋아야한다.'],
                                 ['시야가 좋아야한다.','DMR, SR 숙련도 상.']];
+                    var flag = 0;
+                    if ((role.length == player.length) ==  (player.length == details.legth)){
+                        flag = role.length;
+                    }
                     var i = 0;
                     var item = '';
-                    while(i<4){
+                    while(i<flag){
                         item += '<div class="price-item">';
                         item += '<div class="price-item-title">';
                         item += role[i];
